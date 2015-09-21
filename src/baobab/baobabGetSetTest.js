@@ -13,7 +13,10 @@ const state = {
     }
 }
 
-const baobab = new Baobab(state)
+const baobab = new Baobab(state, {
+    immutable: false,
+    persistent: false
+})
 
 baobab.set(['facets', 'A'], monkey(
     ['a', 'b'],
