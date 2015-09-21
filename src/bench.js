@@ -2,6 +2,7 @@
 import {Suite} from 'benchmark'
 import imdiGetSetTest from './immutable-di/imdiGetSetTest'
 import baobabGetSetTest from './baobab/baobabGetSetTest'
+import reduxTest from './redux/redux-test'
 
 import calibrate from './calibrate'
 
@@ -19,6 +20,7 @@ suite
     .add('calibrate', calibrate)
     .add('imdiGetSetTest', imdiGetSetTest)
     .add('baobabGetSetTest', baobabGetSetTest)
+    .add('reduxTest', reduxTest)
     .on('cycle', event => {
         console.log(event.target.toString())
     })
